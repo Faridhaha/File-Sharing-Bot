@@ -94,11 +94,11 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+    text = "<b>(っ◔◡◔)っ ♥Selamat datang❤️\n\nUntuk menampilkan video bokep atau link bokep.Anda harus Join ke channel @Berbagibokep_18  atau dengan menekan tombol dibawah ini lalu klik Join,</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>and <a href='https://t.me/{client.username}?start={argument}'>try again</a></b>"
+        text = text + f" <b>dan <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel", url = client.invitelink)]])
